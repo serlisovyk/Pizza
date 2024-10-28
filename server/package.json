@@ -4,7 +4,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "tsc && node dist/server.js",
     "dev": "tsc && nodemon dist/server.js"
   },
   "keywords": [],
