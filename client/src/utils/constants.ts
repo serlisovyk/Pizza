@@ -1,3 +1,3 @@
-export const BASIC_URL = 'https://pizza-sb9c.onrender.com'
+export const BASIC_URL = 'https://pizza-cxnc.onrender.com'
 
 export const typesNames = ['тонкое', 'традиционное']
