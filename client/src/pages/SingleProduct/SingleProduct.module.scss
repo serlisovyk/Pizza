@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 5.208vw;
+  padding-bottom: 150px;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 20px;
+  margin-block: 30px;
+}
+
+.selector {
+  display: flex;
+  gap: 50px;
+}

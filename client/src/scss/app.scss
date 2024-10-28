@@ -1,0 +1,110 @@
+@import 'reset';
+@import 'fonts';
+@import 'variables';
+@import 'button';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--yellow);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.sortActive {
+  font-weight: bold;
+  color: var(--orange);
+}
+
+.categoriesActive {
+  background-color: #282828 !important;
+  color: #fff;
+}
+
+.cartMinus {
+  svg {
+    path:first-of-type {
+      display: none;
+    }
+  }
+}
+
+.cartEmpty {
+  margin: 0 auto;
+  max-width: 560px;
+  text-align: center;
+
+  p {
+    margin-block: 10px;
+
+    @media (max-width: 767px) {
+      margin-block: 20px;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 14px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.goBackBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+
+  border-color: darken(#f6f6f6, 10);
+
+  span {
+    color: darken(#f6f6f6, 20);
+    font-weight: 500;
+    font-weight: 600;
+  }
+
+  &:hover {
+    background-color: darken(#f6f6f6, 90);
+    border-color: darken(#f6f6f6, 90);
+
+    span {
+      color: var(--gray-line);
+    }
+  }
+
+  svg {
+    margin-right: 12px;
+    path {
+      fill: transparent;
+    }
+  }
+}
+
+.payBtn {
+  font-size: 16px;
+  font-weight: 600;
+  width: 210px;
+  padding: 16px;
+}
+
+.pizzaBlockActive {
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  cursor: auto;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}

@@ -1,0 +1,35 @@
+.root {
+  padding: 100px;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (max-width: 1023px) {
+    padding-top: 70px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 40px;
+  }
+
+  span {
+    display: block;
+    font-size: 64px;
+
+    @media (max-width: 767px) {
+      font-size: 54px;
+    }
+  }
+
+  h2 {
+    margin-block: 20px;
+  }
+
+  .text {
+    font-size: 20px;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+}

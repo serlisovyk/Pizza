@@ -1,0 +1,45 @@
+.header {
+  border-bottom: 1px solid var(--gray-line);
+  padding: 40px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .logo {
+    display: flex;
+
+    img {
+      margin-right: 15px;
+
+      @media (max-width: 767px) {
+        margin-right: 10px;
+      }
+    }
+
+    h1 {
+      color: #181818;
+      font-size: 24px;
+      letter-spacing: 1%;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    p {
+      white-space: nowrap;
+      color: #7b7b7b;
+    }
+  }
+}

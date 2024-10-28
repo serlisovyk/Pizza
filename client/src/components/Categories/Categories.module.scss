@@ -1,0 +1,32 @@
+.categories {
+  
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+
+    li {
+      background-color: #f9f9f9;
+      padding: 13px 30px;
+      border-radius: 30px;
+
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
+      user-select: none;
+
+      &:hover {
+        background-color: darken(#f9f9f9, 2%);
+      }
+
+      &:active {
+        background-color: darken(#f9f9f9, 5%);
+      }
+
+      @media (max-width: 767px) {
+        padding: 8px 20px;
+      }
+    }
+  }
+}

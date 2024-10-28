@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "tsc && nodemon dist/server.js"
+  },
+  "keywords": [],
+  "author": "Serhii Lisovyk",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.0",
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^22.7.7",
+    "nodemon": "^3.1.7",
+    "ts-node-dev": "^2.0.0",
+    "tslint": "^5.20.1",
+    "typescript": "^5.6.3"
+  }
+}
