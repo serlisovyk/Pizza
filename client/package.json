@@ -4,17 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^29.5.13",
-    "@types/node": "^22.7.5",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.0",
-    "axios": "^1.7.3",
-    "dotenv-webpack": "^8.1.0",
     "lodash.debounce": "^4.0.8",
-    "qs": "^6.13.0",
     "react": "^18.3.1",
     "react-content-loader": "^7.0.2",
     "react-dom": "^18.3.1",
@@ -23,8 +13,7 @@
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
     "sass": "^1.77.8",
-    "typescript": "^3.2.1",
-    "web-vitals": "^2.1.4"
+    "typescript": "^3.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -52,7 +41,9 @@
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.1",
-    "@types/lodash.debounce": "^4.0.9"
-  },
-  "proxy": "http://localhost:3001"
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/node": "^22.7.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0"
+  }
 }
