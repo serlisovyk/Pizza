@@ -42,9 +42,6 @@ export interface ICartState {
   totalPrice: number
 }
 
-// export interface IProductResponse {
-//   totalResults: number
-//   products: IProduct[]
-//   page: number
-//   totalPages: number
-// }
+export interface IHandleUpdatePageProps {
+  selected: number
+}

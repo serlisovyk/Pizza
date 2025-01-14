@@ -6,11 +6,13 @@ import CartEmpty from '../../components/CartEmpty/CartEmpty'
 import { useAppSelector } from '../../hooks/useAppSelector'
 import useCartTotalCount from '../../hooks/useCartTotalCount'
 import useActions from '../../hooks/useActions'
+import { ROUTES } from '../../utils/routes'
 
 export default function Cart() {
   const { clearCart } = useActions()
 
   const { totalPrice, items } = useAppSelector(selectCart)
+
   const totalCount = useCartTotalCount()
 
   const handleClickClear = () => clearCart()
@@ -108,7 +110,10 @@ export default function Cart() {
             </span>
           </div>
           <div className={styles.buttons}>
-            <Link to="/" className="button button--outline button--add goBackBtn">
+            <Link
+              to={ROUTES.HOME}
+              className="button button--outline button--add goBackBtn"
+            >
               <svg
                 width="8"
                 height="14"

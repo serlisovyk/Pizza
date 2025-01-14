@@ -5,6 +5,7 @@ import { useGetSortListQuery } from '../../redux/api/apiSlice'
 import { ISortListItem } from '../../types/types'
 import { useAppSelector } from '../../hooks/useAppSelector'
 import useActions from '../../hooks/useActions'
+import Loader from '../Loader/Loader'
 
 export default memo(function Sort() {
   const { setSort } = useActions()
@@ -56,7 +57,7 @@ export default memo(function Sort() {
         <div className={styles.popup}>
           <ul>
             {isLoading ? (
-              <li>Загрузка...</li>
+              <Loader />
             ) : (
               sortList?.map((sortListItem, i) => (
                 <li

@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import styles from './Search.module.scss'
 import debounce from 'lodash.debounce'
 import useActions from '../../hooks/useActions'
@@ -17,10 +17,17 @@ export default function Search() {
     inputRef.current?.focus()
   }
 
-  const updateSearchValue = useCallback(
-    debounce((str: string) => setSearchValue(str), 250),
-    []
+  const debouncedSetSearchValue = useMemo(
+    () => debounce((str: string) => setSearchValue(str), 250),
+    [setSearchValue]
   )
+
+  const updateSearchValue = useCallback(
+    (str: string) => debouncedSetSearchValue(str),
+    [debouncedSetSearchValue]
+  )
+
+  useEffect(() => debouncedSetSearchValue.cancel(), [debouncedSetSearchValue])
 
   function handleChangeInput(e: React.ChangeEvent<HTMLInputElement>) {
     setValue(e.target.value)

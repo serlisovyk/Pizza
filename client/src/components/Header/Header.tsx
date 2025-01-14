@@ -4,6 +4,7 @@ import { selectCart } from '../../redux/slices/cart/cartSlice'
 import Search from '../Search/Search'
 import { useAppSelector } from '../../hooks/useAppSelector'
 import useCartTotalCount from '../../hooks/useCartTotalCount'
+import { ROUTES } from '../../utils/routes'
 
 export default function Header() {
   const { pathname } = useLocation()
@@ -13,7 +14,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link to="/" className={styles.logo}>
+        <Link to={ROUTES.HOME} className={styles.logo}>
           <img width="38" src="img/pizza-logo.svg" alt="Pizza logo" />
           <div>
             <h1>React Pizza</h1>
@@ -25,7 +26,7 @@ export default function Header() {
             <Search />
             <>
               <Link to="/cart" className="button button--cart">
-                <span>{totalPrice} ₽</span>
+                <span>{totalPrice} ₴</span>
                 <div className="button__delimiter"></div>
                 <svg
                   width="18"

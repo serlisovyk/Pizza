@@ -1,8 +1,8 @@
 import { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { ROUTES } from '../../utils/routes'
-
 import Home from '../../pages/Home/Home'
+import Loader from '../Loader/Loader'
 
 const Cart = lazy(
   () => import(/* webpackChunkName: "Cart" */ '../../pages/Cart/Cart')
@@ -26,7 +26,7 @@ export default function AppRoutes() {
       <Route
         path={ROUTES.CART}
         element={
-          <Suspense fallback={<div className="loader">Loading...</div>}>
+          <Suspense fallback={<Loader />}>
             <Cart />
           </Suspense>
         }
@@ -34,7 +34,7 @@ export default function AppRoutes() {
       <Route
         path={ROUTES.SINGLE_PRODUCT}
         element={
-          <Suspense fallback={<div className="loader">Loading...</div>}>
+          <Suspense fallback={<Loader />}>
             <SingleProduct />
           </Suspense>
         }
@@ -42,7 +42,7 @@ export default function AppRoutes() {
       <Route
         path={ROUTES.NOT_FOUND}
         element={
-          <Suspense fallback={<div className="loader">Loading...</div>}>
+          <Suspense fallback={<Loader />}>
             <NotFound />
           </Suspense>
         }

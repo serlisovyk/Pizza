@@ -4,6 +4,7 @@ import { useGetCategoriesQuery } from '../../redux/api/apiSlice'
 import { selectFilter } from '../../redux/slices/filter/filterSlice'
 import { useAppSelector } from '../../hooks/useAppSelector'
 import useActions from '../../hooks/useActions'
+import Loader from '../Loader/Loader'
 
 export default memo(function Categories() {
   const { setActiveCategory } = useActions()
@@ -20,7 +21,7 @@ export default memo(function Categories() {
   return (
     <div className={styles.categories}>
       {isLoading ? (
-        <span>Загрузка...</span>
+        <Loader />
       ) : (
         <ul>
           {categories?.map(category => (

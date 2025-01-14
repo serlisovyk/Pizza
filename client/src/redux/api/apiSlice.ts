@@ -6,11 +6,15 @@ import {
   IProductSearchParams,
   ISortListItem,
 } from '../../types/types'
+import { buildProductQueryParams } from '../../utils/utils'
 
 export const apiSlice = createApi({
   reducerPath: 'api',
+
   baseQuery: fetchBaseQuery({ baseUrl: BASIC_URL }),
+
   tagTypes: ['Categories', 'Sort', 'Pizzas', 'OnePizza'],
+
   endpoints: builder => ({
     getCategories: builder.query<ICategory[], void>({
       query: () => '/categories',
@@ -23,22 +27,10 @@ export const apiSlice = createApi({
     }),
 
     getPizzas: builder.query<IProduct[], IProductSearchParams>({
-      query: ({ currentCategory, searchValue, currentPage, sortProperty }) => {
-        const params: Record<string, any> = {
-          page: currentPage,
-          limit: 4,
-          sortBy: sortProperty,
-          order: 'desc',
-        }
-
-        if (currentCategory !== 'Все') params.category = currentCategory
-        if (searchValue) params.search = searchValue
-
-        return {
-          url: '/products',
-          params,
-        }
-      },
+      query: params => ({
+        url: '/products',
+        params: buildProductQueryParams(params),
+      }),
       providesTags: ['Pizzas'],
     }),
 
