@@ -3,6 +3,7 @@ import styles from './SingleProduct.module.scss'
 import { typesNames } from '../../utils/constants'
 import { useGetOnePizzaQuery } from '../../redux/api/apiSlice'
 import Loader from '../../components/Loader/Loader'
+import Error from '../../components/Error/Error'
 
 export default function SingleProduct() {
   const { id } = useParams()
@@ -10,7 +11,7 @@ export default function SingleProduct() {
 
   if (isLoading) return <Loader />
 
-  if (!OnePizzaData) return 'Ошибка загрузки данных'
+  if (!OnePizzaData) return <Error />
 
   const { title, description, price, imageUrl, sizes, types } = OnePizzaData
 
