@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import styles from './SingleProduct.module.scss'
 import { typesNames } from '../../utils/constants'
 import { useGetOnePizzaQuery } from '../../redux/api/apiSlice'
-import Loader from '../../components/Loader/Loader'
+import { Loader } from '../../components/Loader/Loader'
 import Error from '../../components/Error/Error'
 
 export default function SingleProduct() {
