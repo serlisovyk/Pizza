@@ -2,9 +2,6 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../../store'
 import { ISortListItem } from '../../../types/types'
 
-
-
-
 const filterSlice = createSlice({
   name: 'filter',
   initialState: {

@@ -5,7 +5,7 @@ import { useGetSortListQuery } from '../../redux/api/apiSlice'
 import { ISortListItem } from '../../types/types'
 import { useAppSelector } from '../../hooks/useAppSelector'
 import useActions from '../../hooks/useActions'
-import {Loader} from '../Loader/Loader'
+import { Loader } from '../Loader/Loader'
 
 export default memo(function Sort() {
   const { setSort } = useActions()

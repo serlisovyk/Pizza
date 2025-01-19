@@ -30,29 +30,21 @@ export default function SingleProduct() {
           <div>
             <h3 className={styles.subtitle}>Типы пиццы:</h3>
             <ul>
-              {sizes && sizes.length > 0 ? (
-                sizes.map(size => (
-                  <li key={size} className={styles.size}>
-                    {size} см.
-                  </li>
-                ))
-              ) : (
-                <Loader />
-              )}
+              {sizes.map(size => (
+                <li key={size} className={styles.size}>
+                  {size} см.
+                </li>
+              ))}
             </ul>
           </div>
           <div>
             <h3 className={styles.subtitle}>Типы теста:</h3>
             <ul>
-              {types && types.length > 0 ? (
-                types.map(type => (
-                  <li key={type} className={styles.type}>
-                    {typesNames[type]}
-                  </li>
-                ))
-              ) : (
-                <Loader />
-              )}
+              {types.map(type => (
+                <li key={type} className={styles.type}>
+                  {typesNames[type]}
+                </li>
+              ))}
             </ul>
           </div>
         </div>

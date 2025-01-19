@@ -8,7 +8,9 @@ import { ROUTES } from '../../utils/routes'
 
 export default function Header() {
   const { pathname } = useLocation()
+
   const { totalPrice } = useAppSelector(selectCart)
+
   const totalCount = useCartTotalCount()
 
   return (

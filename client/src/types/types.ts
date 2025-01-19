@@ -22,8 +22,10 @@ export interface ICartProduct {
 
 export interface ISortListItem {
   name: string
-  sortProperty: 'rating' | 'title' | 'price'
+  sortProperty: TSortProperty
 }
+
+type TSortProperty = 'rating' | 'title' | 'price'
 
 export interface ICategory {
   _id: number

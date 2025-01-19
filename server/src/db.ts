@@ -2,9 +2,13 @@ import { connect } from 'mongoose'
 
 export default async function connectDB() {
   try {
-    await connect(
-      'mongodb+srv://serlisovyk:serggres123@pizza.iuabp.mongodb.net/pizza?retryWrites=true&w=majority&appName=pizza' as string
-    )
+    if (!process.env.DB_URI) {
+      console.log('DB_URI not found')
+      process.exit(1)
+    }
+
+    await connect(process.env.DB_URI)
+
     console.log('Connected to MongoDB')
   } catch (error) {
     console.log(error)
